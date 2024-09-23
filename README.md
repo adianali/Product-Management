@@ -106,12 +106,150 @@ Authenticate the user and return a Bearer token.
 }
 ```
 
+**Response:**
+
+```json
+{
+    "status": true,
+    "access_token": "11|sfk92t5NRPMI66s9avwU5TJyDbBBzv9EgTa1tBvlb3def5cc",
+    "token_type": "Bearer",
+    "user": {
+        "id": 5,
+        "name": "Add your name in the body",
+        "email": "test12@gmail.com",
+        "email_verified_at": null,
+        "created_at": "2024-09-23T02:27:46.000000Z",
+        "updated_at": "2024-09-23T02:27:46.000000Z"
+    }
+}
+```
+### POST /api/register
+
+Register a new user.
+
 **Request:**
 
 ```json
 {
-  "access_token": "your_token",
-  "token_type": "Bearer"
+  "name": "User Name",
+  "email": "user@example.com",
+  "password": "password123",
+  "password_confirmation": "password123"
 }
 ```
+
+**Response:**
+
+```json
+{
+    "status": true,
+    "message": "User created successfully"
+}
+```
+## Product Endpoints
+
+### GET /api/products
+Get the list of all products.
+
+**Response:**
+
+```json
+{
+    "data": [
+        {
+            "id": 9,
+            "product_name": "product 1",
+            "category": "Category A",
+            "price": "100000.00",
+            "discount": 10,
+            "created_at": "2024-09-23T02:30:50.000000Z"
+        }
+    ]
+}
+```
+### GET /api/products/{id}
+Get a specific product by ID.
+
+**Response:**
+
+```json
+{
+    "data": {
+        "id": 9,
+        "product_name": "product 1",
+        "category": "Category A",
+        "price": "100000.00",
+        "discount": 10,
+        "created_at": "2024-09-23T02:30:50.000000Z"
+    }
+}
+```
+### POST /api/products
+Create a new product.
+
+**Request:**
+
+```json
+{
+  "product_name": "Product 1",
+  "category": "Category A",
+  "price": "100000",
+  "discount": 10
+}
+
+```
+**Response:**
+
+```json
+{
+    "message": "Product created successfully",
+    "data": {
+        "id": 9,
+        "product_name": "product 1",
+        "category": "Category A",
+        "price": "100000",
+        "discount": "10",
+        "created_at": "2024-09-23T02:30:50.000000Z"
+    }
+}
+```
+### PUT /api/products/{id}
+Update an existing product.
+
+**Request:**
+
+```json
+{
+  "product_name": "Updated Product",
+  "category": "Category B",
+  "price": "200000",
+  "discount": 15
+}
+```
+**Response:**
+
+```json
+{
+    "message": "Product updated successfully",
+    "data": {
+        "id": 9,
+        "product_name": "Updated Product",
+        "category": "Category B",
+        "price": "200000",
+        "discount": "15",
+        "created_at": "2024-09-23T02:30:50.000000Z"
+    }
+}
+```
+### DELETE /api/products/{id}
+Delete a product by ID.
+
+**Response:**
+
+```json
+{
+    "message": "Product deleted successfully"
+}
+```
+
 
