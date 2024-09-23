@@ -8,7 +8,7 @@ This is a **Product Management** web application built using **React** on the fr
 - **Responsive UI**: The frontend is built using **Bootstrap**, making it fully responsive.
 - **Formatted Prices**: Product prices are displayed in Indonesian Rupiah format.
 - **SweetAlert2 Integration**: All actions like product updates and deletions trigger SweetAlert popups for better user experience.
-- **Discount Management**: Display and manage product discounts with a percentage symbol (`%`).
+- **Discount Management**: Display product discounts with a percentage symbol (`%`).
 
 ## Technologies Used
 
@@ -22,7 +22,7 @@ This is a **Product Management** web application built using **React** on the fr
 - **SweetAlert2**: For beautiful alert dialogs and confirmations.
 
 ### Backend
-- **Laravel 10**: A robust PHP framework for building the REST API.
+- **Laravel 11**: A robust PHP framework for building the REST API.
 - **Laravel Sanctum**: Provides API token authentication.
 - **MySQL**: Database to store product and user information.
 - **PHP 8.x**: Backend programming language.
@@ -38,7 +38,7 @@ This is a **Product Management** web application built using **React** on the fr
 - **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/product-management-app.git
+   git clone https://github.com/adianali/Product-Management.git
 
 ### Frontend Setup
 
